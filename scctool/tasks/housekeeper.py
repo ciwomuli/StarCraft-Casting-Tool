@@ -40,10 +40,11 @@ class HouseKeeperThread(TasksThread):
         module_logger.info('Checking IP')
         url = 'https://api.ipify.org'
         try:
-            ip = requests.get(url=url).text
-            if self._last_ip != ip:
-                self._last_ip = ip
-                self.ip_updated.emit(ip)
+            pass
+            #ip = requests.get(url=url).text
+            #if self._last_ip != ip:
+                #self._last_ip = ip
+                #self.ip_updated.emit(ip)
         except Exception:
             module_logger.exception("message")
 

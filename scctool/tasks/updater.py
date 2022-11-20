@@ -52,16 +52,7 @@ def getChannel(version=None):
 
 def needInitialUpdate(version):
     """Check if data update is needed."""
-    if version == '0.0.0':
-        return True
-    elif not os.path.exists(
-            scctool.settings.getAbsPath(scctool.settings.casting_html_dir)):
-        return True
-    elif getLastVersion() != scctool.__version__:
-        setLastVersion(scctool.__version__)
-        return True
-    else:
-        return False
+    return False
 
 
 def readJsonFile(force=False):
